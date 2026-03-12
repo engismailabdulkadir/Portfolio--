@@ -27,7 +27,10 @@ function Contact() {
                 <Mail className="mt-1 text-brand-300" size={18} />
                 <div>
                   <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
-                  <a href={`mailto:${profile.email}`} className="transition hover:text-white">
+                  <a
+                    href={`mailto:${profile.email}`}
+                    className="transition hover:text-slate-950 dark:hover:text-white"
+                  >
                     {profile.email}
                   </a>
                 </div>
@@ -36,7 +39,10 @@ function Contact() {
                 <Phone className="mt-1 text-brand-300" size={18} />
                 <div>
                   <p className="text-sm text-slate-500 dark:text-slate-400">Phone</p>
-                  <a href={`tel:${profile.phone}`} className="transition hover:text-white">
+                  <a
+                    href={`tel:${profile.phone}`}
+                    className="transition hover:text-slate-950 dark:hover:text-white"
+                  >
                     {profile.phone}
                   </a>
                 </div>

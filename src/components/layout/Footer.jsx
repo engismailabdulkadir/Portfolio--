@@ -19,7 +19,11 @@ function Footer({ links }) {
           </h4>
           <div className="mt-4 flex flex-wrap gap-4 text-sm text-slate-600 dark:text-slate-400">
             {links.map((link) => (
-              <a key={link.id} href={`#${link.id}`} className="transition hover:text-white">
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className="transition hover:text-slate-950 dark:hover:text-white"
+              >
                 {link.label}
               </a>
             ))}
@@ -37,7 +41,7 @@ function Footer({ links }) {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="transition hover:text-white"
+                className="transition hover:text-slate-950 dark:hover:text-white"
               >
                 {social.label}
               </a>

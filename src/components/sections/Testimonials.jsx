@@ -17,7 +17,7 @@ function Testimonials() {
           {testimonials.map((item) => (
             <Card key={item.name} className="h-full">
               <p className="text-lg leading-8 text-slate-700 dark:text-slate-200">&ldquo;{item.quote}&rdquo;</p>
-              <div className="mt-6 border-t border-white/10 pt-5">
+              <div className="mt-6 border-t border-slate-200 pt-5 dark:border-white/10">
                 <p className="font-display text-lg font-semibold text-slate-900 dark:text-white">{item.name}</p>
                 <p className="text-sm text-slate-500 dark:text-slate-400">{item.role}</p>
               </div>

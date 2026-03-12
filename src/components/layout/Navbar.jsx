@@ -27,7 +27,7 @@ function Navbar({ links, theme, toggleTheme }) {
       <a
         key={link.id}
         className={cn(
-          "transition hover:text-white",
+          "transition hover:text-slate-950 dark:hover:text-white",
           activeSection === link.id
             ? "text-slate-950 dark:text-white"
             : "text-slate-600 dark:text-slate-300",
@@ -44,8 +44,9 @@ function Navbar({ links, theme, toggleTheme }) {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition duration-300",
-        scrolled ? "bg-slate-950/85 backdrop-blur-xl" : "bg-transparent",
-        scrolled ? "dark:bg-slate-950/85 dark:backdrop-blur-xl" : "",
+        scrolled
+          ? "border-b border-slate-200 bg-white/85 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/85"
+          : "bg-transparent",
       )}
     >
       <nav className="page-shell flex items-center justify-between py-3">
