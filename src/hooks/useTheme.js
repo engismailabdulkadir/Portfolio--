@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 const THEME_KEY = "portfolio-theme";
 
@@ -18,9 +18,14 @@ function getInitialTheme() {
 function useTheme() {
   const [theme, setTheme] = useState(getInitialTheme);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
+
     root.classList.toggle("dark", theme === "dark");
+    body.classList.toggle("dark", theme === "dark");
+    root.dataset.theme = theme;
+    body.dataset.theme = theme;
     root.style.colorScheme = theme;
     window.localStorage.setItem(THEME_KEY, theme);
   }, [theme]);

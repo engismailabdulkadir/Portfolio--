@@ -45,7 +45,9 @@ function Navbar({ links, theme, toggleTheme }) {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition duration-300",
         scrolled
-          ? "border-b border-slate-200 bg-white/85 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/85"
+          ? theme === "dark"
+            ? "border-b border-white/10 bg-slate-950/85 backdrop-blur-xl"
+            : "border-b border-slate-200 bg-white/85 backdrop-blur-xl"
           : "bg-transparent",
       )}
     >

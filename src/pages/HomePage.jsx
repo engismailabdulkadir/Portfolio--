@@ -17,10 +17,11 @@ function HomePage() {
 
   return (
     <div
-      className={[
-        theme === "dark" ? "dark" : "",
-        "bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100",
-      ].join(" ")}
+      className={
+        theme === "dark"
+          ? "bg-slate-950 text-slate-100 transition-colors duration-300"
+          : "bg-slate-50 text-slate-900 transition-colors duration-300"
+      }
     >
       <Navbar links={navLinks} theme={theme} toggleTheme={toggleTheme} />
       <main>
