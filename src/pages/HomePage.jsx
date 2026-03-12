@@ -16,7 +16,12 @@ function HomePage() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+    <div
+      className={[
+        theme === "dark" ? "dark" : "",
+        "bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100",
+      ].join(" ")}
+    >
       <Navbar links={navLinks} theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
