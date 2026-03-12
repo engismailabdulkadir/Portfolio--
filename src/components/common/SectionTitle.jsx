@@ -3,7 +3,7 @@ function SectionTitle({ eyebrow, title, description, align = "left" }) {
 
   return (
     <div className={alignment}>
-      <span className="inline-flex rounded-full border border-brand-400/30 bg-brand-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-brand-200">
+      <span className="inline-flex rounded-full border border-brand-400/30 bg-brand-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-brand-700 dark:text-brand-200">
         {eyebrow}
       </span>
       <h2 className="mt-4 font-display text-3xl font-semibold text-slate-900 dark:text-white md:text-4xl">
