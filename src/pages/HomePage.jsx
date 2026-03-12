@@ -10,11 +10,14 @@ import Skills from "../components/sections/Skills";
 import Testimonials from "../components/sections/Testimonials";
 import ScrollToTop from "../components/ui/ScrollToTop";
 import { navLinks } from "../data/site";
+import useTheme from "../hooks/useTheme";
 
 function HomePage() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className="bg-slate-950 text-slate-100">
-      <Navbar links={navLinks} />
+    <div className="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+      <Navbar links={navLinks} theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />

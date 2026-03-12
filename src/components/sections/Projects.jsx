@@ -4,7 +4,7 @@ import { projects } from "../../data/projects";
 
 function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 bg-slate-900/60 py-24">
+    <section id="projects" className="scroll-mt-24 bg-slate-100 py-24 dark:bg-slate-900/60">
       <div className="page-shell">
         <SectionTitle
           eyebrow="Projects"
@@ -30,7 +30,7 @@ function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
+                      className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
                     >
                       {tech}
                     </span>

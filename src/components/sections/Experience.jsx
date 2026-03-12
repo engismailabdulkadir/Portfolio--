@@ -22,16 +22,16 @@ function Experience() {
                     <p className="text-sm uppercase tracking-[0.25em] text-brand-200">
                       Step {index + 1}
                     </p>
-                    <h3 className="mt-2 font-display text-2xl font-semibold text-white">
+                    <h3 className="mt-2 font-display text-2xl font-semibold text-slate-900 dark:text-white">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-slate-300">{item.org}</p>
+                    <p className="mt-1 text-slate-600 dark:text-slate-300">{item.org}</p>
                   </div>
-                  <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                  <span className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                     {item.period}
                   </span>
                 </div>
-                <p className="mt-5 leading-7 text-slate-300">{item.description}</p>
+                <p className="mt-5 leading-7 text-slate-600 dark:text-slate-300">{item.description}</p>
               </div>
             </Card>
           ))}

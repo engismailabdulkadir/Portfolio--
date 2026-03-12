@@ -21,12 +21,12 @@ function Contact() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <Card>
-            <h3 className="font-display text-2xl font-semibold text-white">Contact Details</h3>
-            <div className="mt-6 space-y-5 text-slate-300">
+            <h3 className="font-display text-2xl font-semibold text-slate-900 dark:text-white">Contact Details</h3>
+            <div className="mt-6 space-y-5 text-slate-700 dark:text-slate-300">
               <div className="flex items-start gap-4">
                 <Mail className="mt-1 text-brand-300" size={18} />
                 <div>
-                  <p className="text-sm text-slate-400">Email</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
                   <a href={`mailto:${profile.email}`} className="transition hover:text-white">
                     {profile.email}
                   </a>
@@ -35,7 +35,7 @@ function Contact() {
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 text-brand-300" size={18} />
                 <div>
-                  <p className="text-sm text-slate-400">Phone</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Phone</p>
                   <a href={`tel:${profile.phone}`} className="transition hover:text-white">
                     {profile.phone}
                   </a>
@@ -44,14 +44,14 @@ function Contact() {
               <div className="flex items-start gap-4">
                 <MapPin className="mt-1 text-brand-300" size={18} />
                 <div>
-                  <p className="text-sm text-slate-400">Location</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Location</p>
                   <p>{profile.location}</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-8">
-              <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Social Links</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Social Links</p>
               <div className="mt-4 flex flex-wrap gap-3">
                 {profile.socials.map((social) => (
                   <a
@@ -59,7 +59,7 @@ function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 transition hover:border-brand-300/40 hover:text-white"
+                    className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700 transition hover:border-brand-300/40 hover:text-slate-900 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white"
                   >
                     {social.label}
                   </a>
@@ -72,31 +72,31 @@ function Contact() {
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="block">
-                  <span className="mb-2 block text-sm text-slate-300">Name</span>
+                  <span className="mb-2 block text-sm text-slate-700 dark:text-slate-300">Name</span>
                   <input
                     required
                     type="text"
                     placeholder="Your name"
-                    className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-brand-300"
+                    className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-300 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500"
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-2 block text-sm text-slate-300">Email</span>
+                  <span className="mb-2 block text-sm text-slate-700 dark:text-slate-300">Email</span>
                   <input
                     required
                     type="email"
                     placeholder="you@example.com"
-                    className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-brand-300"
+                    className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-300 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500"
                   />
                 </label>
               </div>
               <label className="block">
-                <span className="mb-2 block text-sm text-slate-300">Message</span>
+                <span className="mb-2 block text-sm text-slate-700 dark:text-slate-300">Message</span>
                 <textarea
                   required
                   rows="6"
                   placeholder="Tell me about your project or opportunity."
-                  className="w-full rounded-3xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-brand-300"
+                  className="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-300 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500"
                 />
               </label>
               <Button type="submit">Send Message</Button>

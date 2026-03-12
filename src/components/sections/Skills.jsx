@@ -4,7 +4,7 @@ import { skillGroups } from "../../data/skills";
 
 function Skills() {
   return (
-    <section id="skills" className="scroll-mt-24 bg-slate-900/60 py-24">
+    <section id="skills" className="scroll-mt-24 bg-slate-100 py-24 dark:bg-slate-900/60">
       <div className="page-shell">
         <SectionTitle
           eyebrow="Skills"
@@ -15,15 +15,15 @@ function Skills() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {skillGroups.map((group) => (
             <Card key={group.title}>
-              <h3 className="font-display text-xl font-semibold text-white">{group.title}</h3>
+              <h3 className="font-display text-xl font-semibold text-slate-900 dark:text-white">{group.title}</h3>
               <div className="mt-6 space-y-4">
                 {group.items.map((skill) => (
                   <div key={skill.name}>
                     <div className="mb-2 flex items-center justify-between text-sm">
-                      <span className="text-slate-200">{skill.name}</span>
-                      <span className="text-slate-400">{skill.level}%</span>
+                      <span className="text-slate-700 dark:text-slate-200">{skill.name}</span>
+                      <span className="text-slate-500 dark:text-slate-400">{skill.level}%</span>
                     </div>
-                    <div className="h-2 rounded-full bg-white/10">
+                    <div className="h-2 rounded-full bg-slate-200 dark:bg-white/10">
                       <div
                         className="h-2 rounded-full bg-gradient-to-r from-brand-400 to-emerald-400"
                         style={{ width: `${skill.level}%` }}
